@@ -1,0 +1,50 @@
+export const testimonials = [
+    {
+        id: 1,
+        name: 'Vikram Mehta',
+        role: 'Wedding Photographer',
+        content: 'RentEase saved my life when my primary camera failed. I found a high-end replacement in 30 minutes!',
+        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200',
+        rating: 5,
+    },
+    {
+        id: 2,
+        name: 'Ananya Iyer',
+        role: 'Tech Blogger',
+        content: 'The platform is super easy to use. I rented a MacBook for a week, and the process was seamless.',
+        avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200',
+        rating: 4,
+    },
+    {
+        id: 3,
+        name: 'Suresh Raina',
+        role: 'Event Manager',
+        content: 'Finding quality speakers for events was always a struggle until I found RentEase. Highly recommended!',
+        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200',
+        rating: 5,
+    },
+    {
+        id: 4,
+        name: 'Priya Sharma',
+        role: 'University Student',
+        content: 'I needed a DSLR for my media project. Renting was so much better than buying. Great service!',
+        avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200',
+        rating: 5,
+    },
+    {
+        id: 5,
+        name: 'Rahul Kapoor',
+        role: 'Software Engineer',
+        content: 'Tried out the latest PS5 before deciding to buy. The equipment was in perfect condition.',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200',
+        rating: 5,
+    },
+    {
+        id: 6,
+        name: 'Neha Gupta',
+        role: 'Freelance Designer',
+        content: 'The Wacom tablet I rented was a game changer for my client presentation. Super fast delivery!',
+        avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200',
+        rating: 4,
+    }
+];

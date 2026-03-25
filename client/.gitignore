@@ -4,4 +4,12 @@ dist-ssr/
 *.local
 .env
 .env.local
-src
+src/pages
+src/layouts
+src/lib
+src/routes
+src/services
+src/store
+src/styles
+src/utils
+
