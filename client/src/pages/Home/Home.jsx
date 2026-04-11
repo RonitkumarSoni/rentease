@@ -2,6 +2,8 @@ import React from 'react';
 import Hero from '../../components/home/Hero';
 import CategoryCard from '../../components/product/CategoryCard';
 import ProductCard from '../../components/product/ProductCard';
+import RentEaseHelmet from '../../utils/RentEaseHelmet';
+import { SEO_CONFIG } from '../../utils/seoConfig';
 import { categories } from '../../data/categories';
 import { products } from '../../data/products';
 import { testimonials } from '../../data/testimonials';
@@ -42,7 +44,11 @@ const Home = () => {
     }, [totalSlides, totalProductSlides, totalTestimonialSlides, isPaused]);
 
     return (
-        <div className="min-h-screen" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
+        <>
+          {/* SEO: Set page-specific meta tags */}
+          <RentEaseHelmet {...SEO_CONFIG.home} />
+          
+          <div className="min-h-screen" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
             <Hero />
 
             {/* Categories Carousel - Flipkart Style */}
@@ -71,8 +77,8 @@ const Home = () => {
                                 key={idx}
                                 onClick={() => setActiveSlide(idx)}
                                 className={`h-1.5 rounded-full transition-all duration-300 ${activeSlide === idx
-                                        ? 'w-8 bg-primary'
-                                        : 'w-2 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400'
+                                    ? 'w-8 bg-primary'
+                                    : 'w-2 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400'
                                     }`}
                                 aria-label={`Go to slide ${idx + 1}`}
                             />
@@ -94,7 +100,7 @@ const Home = () => {
                 </div>
 
                 <div className="relative overflow-hidden">
-                    <motion.div 
+                    <motion.div
                         className="flex"
                         animate={{ x: `-${productSlide * 100}%` }}
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
@@ -122,8 +128,8 @@ const Home = () => {
                                 key={idx}
                                 onClick={() => setProductSlide(idx)}
                                 className={`h-2 rounded-full transition-all duration-300 ${productSlide === idx
-                                        ? 'w-10 bg-primary shadow-lg shadow-primary/30'
-                                        : 'w-2 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400'
+                                    ? 'w-10 bg-primary shadow-lg shadow-primary/30'
+                                    : 'w-2 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400'
                                     }`}
                                 aria-label={`Go to products slide ${idx + 1}`}
                             />
@@ -204,8 +210,8 @@ const Home = () => {
                                 key={idx}
                                 onClick={() => setTestimonialSlide(idx)}
                                 className={`h-1.5 rounded-full transition-all duration-300 ${testimonialSlide === idx
-                                        ? 'w-8 bg-primary'
-                                        : 'w-2 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400'
+                                    ? 'w-8 bg-primary'
+                                    : 'w-2 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400'
                                     }`}
                                 aria-label={`Go to testimonial slide ${idx + 1}`}
                             />
