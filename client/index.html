@@ -1,15 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Character Encoding -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- Mobile Responsiveness & Browser Compatibility -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RentEase - Quality Rentals at Your Fingertips</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Primary Title (Most Important for SEO) -->
+    <title>RentEase - Quality Rentals at Your Fingertips | Buy, Sell & Rent</title>
+
+    <!-- Primary Meta Description -->
+    <meta
+      name="description"
+      content="RentEase is your one-stop rental marketplace to buy, sell, and rent anything. Discover affordable rentals, connect with trusted sellers, and get quality items delivered. Start renting today!"
+    />
+
+    <!-- Keywords -->
+    <meta
+      name="keywords"
+      content="rental marketplace, buy rent sell, affordable rentals, online rentals, RentEase, rental platform, items for rent, quality rentals"
+    />
+
+    <!-- Author & Theme Color -->
+    <meta name="author" content="RentEase" />
+    <meta name="theme-color" content="#10B981" />
+
+    <!-- Canonical URL (Avoid duplicate content) -->
+    <link rel="canonical" href="https://rent-ease-gold.vercel.app" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Open Graph Tags (WhatsApp, LinkedIn, Facebook) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RentEase - Quality Rentals at Your Fingertips" />
+    <meta
+      property="og:description"
+      content="Rent, buy, and sell anything on RentEase. The most trusted rental marketplace for quality items at affordable prices."
+    />
+    <meta property="og:url" content="https://rent-ease-gold.vercel.app" />
+    <meta property="og:image" content="https://rent-ease-gold.vercel.app/favicon.svg" />
+    <meta property="og:site_name" content="RentEase" />
+
+    <!-- Twitter Card Tags (Twitter/X sharing) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RentEase - Quality Rentals Marketplace" />
+    <meta
+      name="twitter:description"
+      content="Rent, buy, and sell anything on RentEase. The most trusted rental marketplace."
+    />
+    <meta name="twitter:image" content="https://rent-ease-gold.vercel.app/favicon.svg" />
+    <meta name="twitter:url" content="https://rent-ease-gold.vercel.app" />
+
+    <!-- Robots Instruction -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- Language & Locale -->
+    <meta name="language" content="English" />
+    <link rel="alternate" hreflang="en" href="https://rent-ease-gold.vercel.app" />
+
+    <!-- Structured Data (Schema.org for better indexing) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "RentEase",
+        "description": "Quality rentals at your fingertips - buy, sell, and rent anything",
+        "url": "https://rent-ease-gold.vercel.app",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://rent-ease-gold.vercel.app/browse?search={search_term_string}"
+          }
+        },
+        "sameAs": [
+          "https://facebook.com/rentease",
+          "https://twitter.com/rentease",
+          "https://instagram.com/rentease"
+        ]
+      }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "RentEase",
+        "description": "Rental marketplace platform",
+        "url": "https://rent-ease-gold.vercel.app",
+        "logo": "https://rent-ease-gold.vercel.app/favicon.svg",
+        "contact": {
+          "@type": "ContactPoint",
+          "telephone": "+1-234-567-8900",
+          "contactType": "Customer Support"
+        }
+      }
+    </script>
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Razorpay Payment Script -->
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   </head>
+  <body>
+    <!-- Root Element for React -->
+    <div id="root"></div>
+
+    <!-- Fallback content for SEO (if JS fails to load) -->
+    <noscript>
+      <h1>RentEase - Quality Rentals at Your Fingertips</h1>
+      <p>
+        RentEase is your one-stop rental marketplace to buy, sell, and rent anything. 
+        Discover affordable rentals and connect with trusted sellers.
+      </p>
+    </noscript>
+
+    <!-- React App Script -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
