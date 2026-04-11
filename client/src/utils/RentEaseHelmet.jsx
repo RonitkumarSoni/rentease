@@ -11,7 +11,7 @@ export const RentEaseHelmet = ({
 } = {}) => {
   return (
     <Helmet>
-      {/* Primary Meta Tags */}
+      {/* Primary Meta Tags - Use attribute to replace existing */}
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -25,7 +25,7 @@ export const RentEaseHelmet = ({
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
       
-      {/* Open Graph - Social Media */}
+      {/* Open Graph - Social Media (Use property attribute) */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -39,6 +39,11 @@ export const RentEaseHelmet = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:url" content={url} />
+      
+      {/* Mobile App Meta */}
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="RentEase" />
       
       {/* Alternate Language */}
       <link rel="alternate" hreflang="en" href={url} />
