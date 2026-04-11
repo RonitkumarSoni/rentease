@@ -6,11 +6,11 @@ const MainLayout = () => {
     return (
         <div className="flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
             <Navbar />
-            
+
             <main className="flex-grow max-w-[1440px] mx-auto w-full px-6 lg:px-12">
                 <Outlet />
             </main>
-            
+
             <Footer />
         </div>
     );

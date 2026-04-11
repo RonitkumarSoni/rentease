@@ -1,116 +1,112 @@
-// SEO Configuration for RentEase Pages
-// Use these configurations with the RentEaseHelmet component
+/**
+ * RENTEASE SEO CONFIGURATION
+ * Export SEO metadata for all routes
+ */
 
-export const SEO_CONFIG = {
-  home: {
-    title: 'RentEase - Quality Rentals at Your Fingertips | Rent, Buy & Sell',
-    description: 'Discover affordable rentals on RentEase. Rent, buy, and sell anything you need. Connect with trusted sellers and get quality items delivered to your doorstep.',
-    keywords: 'rental marketplace, rent items, buy rent sell, affordable rentals, online rentals, RentEase',
-    url: 'https://rent-ease-gold.vercel.app/',
-    type: 'website'
-  },
-
-  browse: {
-    title: 'Browse Rentals | RentEase - Find Quality Items to Rent',
-    description: 'Browse thousands of items available for rent on RentEase. Find what you need at affordable prices from trusted sellers.',
-    keywords: 'browse rentals, rent items, rental listings, affordable rentals, RentEase marketplace',
-    url: 'https://rent-ease-gold.vercel.app/browse',
-    type: 'website'
-  },
-
-  itemDetails: {
-    title: 'Item Details | RentEase - Rent Quality Items Online',
-    description: 'Check availability and book your rental on RentEase. Safe, secure, and affordable rental options from trusted sellers.',
-    keywords: 'rental item, rent online, book rental, affordable rentals, trusted sellers, RentEase',
-    url: 'https://rent-ease-gold.vercel.app/product',
-    type: 'product'
-  },
-
-  dashboard: {
-    title: 'Dashboard | RentEase - Manage Your Rentals & Account',
-    description: 'Manage your rentals, bookings, wishlist, and profile on RentEase. Track your rental history and preferences.',
-    keywords: 'rental dashboard, my rentals, bookings, profile, RentEase account',
-    url: 'https://rent-ease-gold.vercel.app/dashboard',
-    type: 'website'
-  },
-
-  addListing: {
-    title: 'List Your Item | RentEase - Become a Seller & Earn',
-    description: 'List your items for rent on RentEase. Start earning by renting out your items to thousands of users.',
-    keywords: 'add listing, become seller, list item for rent, passive income, RentEase seller',
-    url: 'https://rent-ease-gold.vercel.app/add-listing',
-    type: 'website'
-  },
-
-  becomeSeller: {
-    title: 'Become a Seller | RentEase - Start Earning Today',
-    description: 'Join RentEase as a seller and earn money by renting out your items. Simple setup, secure transactions, and full support.',
-    keywords: 'become seller, seller program, rental income, passive income, rent out items',
-    url: 'https://rent-ease-gold.vercel.app/become-seller',
-    type: 'website'
-  },
-
-  login: {
-    title: 'Login | RentEase - Access Your Account',
-    description: 'Sign in to your RentEase account to continue renting and managing your profile.',
-    keywords: 'login, sign in, RentEase account, user account',
-    url: 'https://rent-ease-gold.vercel.app/login',
-    type: 'website'
-  },
-
-  signup: {
-    title: 'Sign Up | RentEase - Join Our Rental Community',
-    description: 'Create a new RentEase account in minutes. Join thousands of users renting and selling items.',
-    keywords: 'sign up, register, create account, join RentEase, rental community',
-    url: 'https://rent-ease-gold.vercel.app/signup',
-    type: 'website'
-  },
-
-  cart: {
-    title: 'Cart | RentEase - Review Your Rentals',
-    description: 'Review your rental cart and proceed to checkout on RentEase.',
-    keywords: 'shopping cart, rental cart, checkout, RentEase',
-    url: 'https://rent-ease-gold.vercel.app/cart',
-    type: 'website'
-  },
-
-  wishlist: {
-    title: 'Wishlist | RentEase - Save Your Favorite Items',
-    description: 'View your saved items and wishlisted rentals on RentEase.',
-    keywords: 'wishlist, saved items, favorites, RentEase',
-    url: 'https://rent-ease-gold.vercel.app/dashboard/wishlist',
-    type: 'website'
-  },
-
-  bookings: {
-    title: 'My Bookings | RentEase - Track Your Rentals',
-    description: 'View and manage all your rental bookings on RentEase. Track rental status and schedules.',
-    keywords: 'my bookings, rental bookings, active rentals, rental history, RentEase',
-    url: 'https://rent-ease-gold.vercel.app/dashboard/bookings',
-    type: 'website'
-  },
-
-  profile: {
-    title: 'Profile | RentEase - Manage Your Account Settings',
-    description: 'Update your profile, payment methods, and account settings on RentEase.',
-    keywords: 'profile, account settings, user profile, RentEase',
-    url: 'https://rent-ease-gold.vercel.app/profile',
-    type: 'website'
-  }
+// HOME PAGE
+export const HOME_SEO = {
+  title: 'RentEase - Quality Rentals at Your Fingertips | Rent, Buy & Sell',
+  description: 'Discover affordable rentals on RentEase. Rent, buy, and sell anything you need. Connect with trusted sellers and get quality items delivered to your doorstep.',
+  keywords: 'rental marketplace, rent items, buy rent sell, affordable rentals, online rentals, RentEase',
+  url: 'https://rent-ease-gold.vercel.app/'
 };
 
-/**
- * USAGE EXAMPLE IN A COMPONENT:
- * 
- * import RentEaseHelmet from '@/utils/RentEaseHelmet';
- * import { SEO_CONFIG } from '@/utils/seoConfig';
- * 
- * export default function Home() {
- *   return (
- *     <>
- *       <RentEaseHelmet {...SEO_CONFIG.home} />
- *       {/* Your page content */}
- *     </>
- *   );
- * }
- */
+// BROWSE PAGE
+export const BROWSE_SEO = {
+  title: 'Browse Rentals | RentEase - Find Quality Items to Rent',
+  description: 'Browse thousands of items available for rent. Find electronics, furniture, sports equipment, and more. Rent from verified sellers at affordable prices.',
+  keywords: 'browse rentals, rent items, rental listings, rental marketplace, affordable rentals, RentEase',
+  url: 'https://rent-ease-gold.vercel.app/browse'
+};
+
+// ITEM DETAILS
+export const ITEM_DETAILS_SEO = {
+  title: 'Item Details | RentEase - Rent Quality Items Online',
+  description: 'Rent this item on RentEase. Verified seller, secure checkout, and fast delivery. Book your rental today!',
+  keywords: 'rental item, rent online, book rental, affordable rentals, trusted sellers, RentEase',
+  url: 'https://rent-ease-gold.vercel.app/product/:id',
+  type: 'product'
+};
+
+// ADD LISTING
+export const ADD_LISTING_SEO = {
+  title: 'List Your Item for Rent | RentEase - Start Earning Today',
+  description: 'List items for rent on RentEase and earn passive income. Simple process, verified renters, secure transactions. Start renting out today!',
+  keywords: 'list item for rent, become seller, passive income, rent out items, RentEase seller program',
+  url: 'https://rent-ease-gold.vercel.app/add-listing'
+};
+
+// BECOME SELLER
+export const BECOME_SELLER_SEO = {
+  title: 'Become a RentEase Seller | Earn Money Renting Items',
+  description: 'Join thousands of sellers earning on RentEase. Simple setup, low fees, secure platform. Start earning passive income from unused items.',
+  keywords: 'become seller, earn money, rental platform, passive income, side income, RentEase seller',
+  url: 'https://rent-ease-gold.vercel.app/become-seller'
+};
+
+// AUTH PAGES
+export const LOGIN_SEO = {
+  title: 'Login | RentEase - Access Your Rental Account',
+  description: 'Sign in to your RentEase account to view bookings, wishlist, and manage rentals.',
+  keywords: 'login, sign in, RentEase account, user login',
+  url: 'https://rent-ease-gold.vercel.app/login'
+};
+
+export const SIGNUP_SEO = {
+  title: 'Sign Up | RentEase - Join the Rental Community',
+  description: 'Create a RentEase account in minutes. Join thousands of users renting affordable items. No credit card required to start.',
+  keywords: 'sign up, register, create account, join RentEase, free account',
+  url: 'https://rent-ease-gold.vercel.app/signup'
+};
+
+// DASHBOARD PAGES
+export const DASHBOARD_SEO = {
+  title: 'Dashboard | RentEase - Manage Your Rentals',
+  description: 'Access your RentEase dashboard. View bookings, track rentals, manage wishlist, and update profile settings.',
+  keywords: 'dashboard, my rentals, bookings, profile, RentEase account',
+  url: 'https://rent-ease-gold.vercel.app/dashboard'
+};
+
+export const MY_LISTINGS_SEO = {
+  title: 'My Listings | RentEase Seller Dashboard',
+  description: 'Manage all your rental listings on RentEase. View bookings, earnings, and rental history.',
+  keywords: 'my listings, seller dashboard, rental management, RentEase seller',
+  url: 'https://rent-ease-gold.vercel.app/dashboard/listings'
+};
+
+export const MY_BOOKINGS_SEO = {
+  title: 'My Bookings | RentEase - Track Your Rentals',
+  description: 'View all your active and past rental bookings on RentEase. Track rental status and schedules.',
+  keywords: 'my bookings, active rentals, rental history, booking status, RentEase',
+  url: 'https://rent-ease-gold.vercel.app/dashboard/bookings'
+};
+
+export const WISHLIST_SEO = {
+  title: 'My Wishlist | RentEase - Saved Items',
+  description: 'Your saved wishlist on RentEase. Keep track of items you want to rent later.',
+  keywords: 'wishlist, saved items, bookmarks, wishlist items, RentEase',
+  url: 'https://rent-ease-gold.vercel.app/dashboard/wishlist'
+};
+
+export const PROFILE_SEO = {
+  title: 'Profile Settings | RentEase - Manage Account',
+  description: 'Update your profile, change password, and manage account settings on RentEase.',
+  keywords: 'profile, account settings, user profile, RentEase account management',
+  url: 'https://rent-ease-gold.vercel.app/dashboard/profile'
+};
+
+// Default export with nested structure
+export default {
+  home: HOME_SEO,
+  browse: BROWSE_SEO,
+  itemDetails: ITEM_DETAILS_SEO,
+  addListing: ADD_LISTING_SEO,
+  becomeSeller: BECOME_SELLER_SEO,
+  login: LOGIN_SEO,
+  signup: SIGNUP_SEO,
+  dashboard: DASHBOARD_SEO,
+  myListings: MY_LISTINGS_SEO,
+  bookings: MY_BOOKINGS_SEO,
+  wishlist: WISHLIST_SEO,
+  profile: PROFILE_SEO
+};

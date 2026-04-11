@@ -78,16 +78,16 @@ const Hero = () => {
                                 <p className="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 font-medium leading-relaxed">
                                     {slide.desc}
                                 </p>
-                                
+
                                 <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                                    <Link 
-                                        to="/browse" 
+                                    <Link
+                                        to="/browse"
                                         className="w-full sm:w-auto bg-primary text-white px-10 py-4 rounded-sm font-bold text-lg shadow-xl shadow-primary/20 hover:bg-primary-dark transition-all flex items-center justify-center gap-2 group"
                                     >
                                         Start Browsing <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                                     </Link>
-                                    <Link 
-                                        to="/signup" 
+                                    <Link
+                                        to="/signup"
                                         className="w-full sm:w-auto bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-2 border-slate-200 dark:border-slate-700 px-10 py-4 rounded-sm font-bold text-lg hover:border-primary dark:hover:border-primary transition-all flex items-center justify-center gap-2"
                                     >
                                         List Your Gear <ChevronRight size={20} />
@@ -111,7 +111,7 @@ const Hero = () => {
                                         <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Support</p>
                                     </div>
                                 </div>
-                        </motion.div>
+                            </motion.div>
                         </AnimatePresence>
                     </div>
 
@@ -127,9 +127,9 @@ const Hero = () => {
                                 className="relative z-10 w-full"
                             >
                                 <div className="relative bg-gradient-to-tr from-primary/10 to-secondary/10 p-4 lg:p-8 rounded-[3rem] overflow-hidden">
-                                    <img 
-                                        src={slide.image} 
-                                        alt={slide.title} 
+                                    <img
+                                        src={slide.image}
+                                        alt={slide.title}
                                         className="w-full aspect-video lg:aspect-square object-cover rounded-[2rem] shadow-2xl transition-transform duration-700 hover:scale-105"
                                     />
                                     {/* Floating Card Mockup */}
@@ -145,7 +145,7 @@ const Hero = () => {
                                 </div>
                             </motion.div>
                         </AnimatePresence>
-                        
+
                         {/* Background Decor */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 rounded-full blur-[100px] -z-10 animate-pulse"></div>
                     </div>
@@ -160,9 +160,9 @@ const Hero = () => {
                             className={`group relative h-4 w-4 flex items-center justify-center`}
                             aria-label={`Go to slide ${idx + 1}`}
                         >
-                            <div className={`h-2 rounded-full transition-all duration-500 ${currentSlide === idx 
-                                ? 'w-8 bg-primary shadow-lg shadow-primary/30' 
-                                : 'w-2 bg-slate-300 dark:bg-slate-700 group-hover:bg-slate-400 group-hover:w-4'}`} 
+                            <div className={`h-2 rounded-full transition-all duration-500 ${currentSlide === idx
+                                ? 'w-8 bg-primary shadow-lg shadow-primary/30'
+                                : 'w-2 bg-slate-300 dark:bg-slate-700 group-hover:bg-slate-400 group-hover:w-4'}`}
                             />
                         </button>
                     ))}
@@ -173,3 +173,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

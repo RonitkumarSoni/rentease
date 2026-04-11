@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { Link, useNavigate } from 'react-router-dom';
+import RentEaseHelmet from '../../utils/RentEaseHelmet';
 import { useAuth } from '../../context/AuthContext';
 import { Eye, EyeOff, Loader2, ArrowLeft, ShieldCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -54,6 +55,13 @@ const Signup = () => {
     };
 
     return (
+        <>
+        <RentEaseHelmet 
+            title="Sign Up | RentEase - Create Your Free Account"
+            description="Join RentEase today! Create your free account in minutes. No credit card required. Start renting and selling items instantly."
+            keywords="sign up, register, create account, join RentEase, free account registration"
+            url="https://rent-ease-gold.vercel.app/signup"
+        />
         <div className="min-h-screen flex bg-white dark:bg-slate-950">
              {/* Left side: Visual (Desktop Only) */}
              <div className="hidden lg:flex flex-1 bg-secondary items-center justify-center relative overflow-hidden">
@@ -172,6 +180,7 @@ const Signup = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

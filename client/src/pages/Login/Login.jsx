@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { Link, useNavigate } from 'react-router-dom';
+import RentEaseHelmet from '../../utils/RentEaseHelmet';
 import { useAuth } from '../../context/AuthContext';
 import { Eye, EyeOff, Loader2, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -38,6 +39,13 @@ const Login = () => {
     };
 
     return (
+        <>
+        <RentEaseHelmet 
+            title="Login | RentEase - Sign In to Your Account"
+            description="Sign in to your RentEase account to access bookings, listings, and manage your rentals securely."
+            keywords="login, sign in, RentEase account, rental account"
+            url="https://rent-ease-gold.vercel.app/login"
+        />
         <div className="min-h-screen flex bg-white dark:bg-slate-950">
             {/* Left side: Form */}
             <div className="flex-1 flex flex-col justify-center px-8 lg:px-24">
@@ -143,6 +151,7 @@ const Login = () => {
                 <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-[100px] -ml-48 -mb-48"></div>
             </div>
         </div>
+        </>
     );
 };
 

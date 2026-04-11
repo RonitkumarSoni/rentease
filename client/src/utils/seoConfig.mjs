@@ -90,6 +90,14 @@ export const SEO_CONFIG = {
     type: 'website'
   },
 
+  myListings: {
+    title: 'My Listings | RentEase - Manage Your Rentals',
+    description: 'Manage all your rental listings on RentEase. View bookings, earnings, and rental history.',
+    keywords: 'my listings, seller dashboard, rental management, RentEase seller',
+    url: 'https://rent-ease-gold.vercel.app/dashboard/listings',
+    type: 'website'
+  },
+
   profile: {
     title: 'Profile | RentEase - Manage Your Account Settings',
     description: 'Update your profile, payment methods, and account settings on RentEase.',
@@ -110,3 +118,5 @@ export const SEO_CONFIG = {
  *   // return with <RentEaseHelmet {...SEO_CONFIG.home} />
  * }
  */
+
+export default SEO_CONFIG;
