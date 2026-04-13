@@ -2,7 +2,7 @@
          xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- Homepage -->
   <url>
-    <loc>https://rent-ease-gold.vercel.app/</loc>
+    <loc>https://rent-ease-web.vercel.app/</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -10,7 +10,7 @@
   
   <!-- Main Pages -->
   <url>
-    <loc>https://rent-ease-gold.vercel.app/browse</loc>
+    <loc>https://rent-ease-web.vercel.app/browse</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
@@ -18,7 +18,7 @@
   
   <!-- User Seller Page -->
   <url>
-    <loc>https://rent-ease-gold.vercel.app/become-seller</loc>
+    <loc>https://rent-ease-web.vercel.app/become-seller</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -26,14 +26,14 @@
   
   <!-- Auth Pages -->
   <url>
-    <loc>https://rent-ease-gold.vercel.app/login</loc>
+    <loc>https://rent-ease-web.vercel.app/login</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://rent-ease-gold.vercel.app/signup</loc>
+    <loc>https://rent-ease-web.vercel.app/signup</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -41,35 +41,35 @@
   
   <!-- User Dashboard Pages -->
   <url>
-    <loc>https://rent-ease-gold.vercel.app/dashboard</loc>
+    <loc>https://rent-ease-web.vercel.app/dashboard</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://rent-ease-gold.vercel.app/dashboard/profile</loc>
+    <loc>https://rent-ease-web.vercel.app/dashboard/profile</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://rent-ease-gold.vercel.app/dashboard/listings</loc>
+    <loc>https://rent-ease-web.vercel.app/dashboard/listings</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://rent-ease-gold.vercel.app/dashboard/bookings</loc>
+    <loc>https://rent-ease-web.vercel.app/dashboard/bookings</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://rent-ease-gold.vercel.app/dashboard/wishlist</loc>
+    <loc>https://rent-ease-web.vercel.app/dashboard/wishlist</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -77,7 +77,7 @@
   
   <!-- Cart & Checkout -->
   <url>
-    <loc>https://rent-ease-gold.vercel.app/cart</loc>
+    <loc>https://rent-ease-web.vercel.app/cart</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -85,21 +85,21 @@
   
   <!-- Other Pages -->
   <url>
-    <loc>https://rent-ease-gold.vercel.app/add-listing</loc>
+    <loc>https://rent-ease-web.vercel.app/add-listing</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://rent-ease-gold.vercel.app/profile</loc>
+    <loc>https://rent-ease-web.vercel.app/profile</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://rent-ease-gold.vercel.app/notifications</loc>
+    <loc>https://rent-ease-web.vercel.app/notifications</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -107,14 +107,14 @@
   
   <!-- Auth Recovery Pages (lower priority) -->
   <url>
-    <loc>https://rent-ease-gold.vercel.app/forgot-password</loc>
+    <loc>https://rent-ease-web.vercel.app/forgot-password</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://rent-ease-gold.vercel.app/reset-password</loc>
+    <loc>https://rent-ease-web.vercel.app/reset-password</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>

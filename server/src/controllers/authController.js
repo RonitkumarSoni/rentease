@@ -60,10 +60,13 @@ export const logoutUser = asyncHandler(async (req, res) => {
 export const signInWithOtp = asyncHandler(async (req, res) => {
   const { email } = req.body;
 
+  const clientUrl = process.env.CLIENT_URL || 'http://localhost:5173';
+  console.log(`Sending Magic Link. Redirect URL: ${clientUrl}`);
+
   const { data, error } = await supabase.auth.signInWithOtp({
     email,
     options: {
-      emailRedirectTo: process.env.CLIENT_URL,
+      emailRedirectTo: clientUrl,
     },
   });
 

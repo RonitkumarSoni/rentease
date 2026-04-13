@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../lib/axios';
 import { supabase } from '../config/supabase';
 
 import toast from 'react-hot-toast';
@@ -14,18 +14,30 @@ export const AuthProvider = ({ children }) => {
 
     // Sync a Supabase session user to our backend + local state
     const syncSupabaseUser = async (supabaseUser) => {
+        const syncToast = toast.loading('Syncing your account...');
+        console.log('🔄 SYNC START:', { email: supabaseUser.email, id: supabaseUser.id });
+
         try {
-            const { data } = await axios.post('/api/auth/sync', {
+            const { data } = await api.post('/api/auth/sync', {
                 name: supabaseUser.user_metadata?.full_name || supabaseUser.user_metadata?.name || supabaseUser.email?.split('@')[0],
                 email: supabaseUser.email,
                 supabaseId: supabaseUser.id,
                 avatar: supabaseUser.user_metadata?.avatar_url
             });
+
+            console.log('✅ SYNC SUCCESS:', data);
             setUser(data);
             localStorage.setItem('rentease_user', JSON.stringify(data));
+            toast.success('Successfully logged in!', { id: syncToast });
             return data;
         } catch (error) {
-            console.error('Error syncing user:', error);
+            console.error('❌ SYNC ERROR:', {
+                message: error.message,
+                response: error.response?.data,
+                status: error.response?.status,
+                url: error.config?.url
+            });
+            toast.error('Sync failed: ' + (error.response?.data?.message || 'Server connection error'), { id: syncToast });
             return null;
         }
     };
@@ -82,7 +94,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
         try {
-            const { data } = await axios.post('/api/auth/login', { email, password });
+            const { data } = await api.post('/api/auth/login', { email, password });
             setUser(data);
             localStorage.setItem('rentease_user', JSON.stringify(data));
             return { success: true };
@@ -97,7 +109,7 @@ export const AuthProvider = ({ children }) => {
     const logout = async () => {
         try {
             await supabase.auth.signOut();
-            await axios.post('/api/auth/logout');
+            await api.post('/api/auth/logout');
             toast.success('Signed out successfully.');
         } catch (error) {
             console.error('Logout error:', error);
@@ -109,7 +121,7 @@ export const AuthProvider = ({ children }) => {
 
     const signup = async (userData) => {
         try {
-            const { data } = await axios.post('/api/auth/signup', userData);
+            const { data } = await api.post('/api/auth/signup', userData);
             setUser(data);
             localStorage.setItem('rentease_user', JSON.stringify(data));
             return { success: true };
@@ -123,7 +135,7 @@ export const AuthProvider = ({ children }) => {
 
     const forgotPassword = async (phone) => {
         try {
-            const { data } = await axios.post('/api/auth/forgot-password', { phone });
+            const { data } = await api.post('/api/auth/forgot-password', { phone });
             return { success: true, message: data.message };
         } catch (error) {
             return {
@@ -135,7 +147,7 @@ export const AuthProvider = ({ children }) => {
 
     const resetPassword = async (phone, otp, newPassword) => {
         try {
-            const { data } = await axios.post('/api/auth/reset-password', { phone, otp, newPassword });
+            const { data } = await api.post('/api/auth/reset-password', { phone, otp, newPassword });
             return { success: true, message: data.message };
         } catch (error) {
             return {
@@ -147,14 +159,22 @@ export const AuthProvider = ({ children }) => {
 
     const signInWithGoogle = async () => {
         try {
+            const redirectTo = window.location.origin;
+            console.log('Initiating Google Login. Redirecting to:', redirectTo);
+            
             const { error } = await supabase.auth.signInWithOAuth({
                 provider: 'google',
                 options: {
-                    redirectTo: window.location.origin
+                    redirectTo: redirectTo,
+                    queryParams: {
+                        access_type: 'offline',
+                        prompt: 'consensus',
+                    },
                 }
             });
             if (error) throw error;
         } catch (error) {
+            console.error('Auth Error:', error);
             toast.error('Google login failed: ' + error.message);
         }
     };

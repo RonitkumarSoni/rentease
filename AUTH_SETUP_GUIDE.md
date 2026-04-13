@@ -1,5 +1,16 @@
 # 🔐 RentEase Authentication Setup Guide
 
+## 🚨 PRODUCTION REDIRECT FIX (Localhost issue)
+अगर आपकी site Vercel पर है और Google login करने पर `localhost` आ रहा है, तो ये 3 चीज़ें fix करें:
+
+1. **Supabase**: [URL Config](https://supabase.com/dashboard/project/ecenxkosefzhclzwhkve/auth/url-configuration) में **Site URL** को `https://rent-ease-web.vercel.app` करें.
+2. **Render**: Environment Variables में `CLIENT_URL` को `https://rent-ease-web.vercel.app` करें.
+3. **Google Console**: Authorized redirect URIs में `https://ecenxkosefzhclzwhkve.supabase.co/auth/v1/callback` डालें.
+
+Run `node fix-auth.js` in the project root to see the exact values.
+
+---
+
 ## ⚠️ Current Status
 ❌ Authentication अभी काम नहीं कर रहा है क्योंकि:
 1. Supabase credentials नहीं हैं

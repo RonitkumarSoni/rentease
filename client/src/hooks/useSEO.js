@@ -18,7 +18,7 @@ import { Helmet } from 'react-helmet-async';
  *         title="RentEase Home - Rent Anything You Need"
  *         description="Browse thousands of items available for rent..."
  *         keywords="rent items, rental marketplace, affordable rentals"
- *         url="https://rent-ease-gold.vercel.app/"
+ *         url="https://rent-ease-web.vercel.app/"
  *       />
  *       {/* Your component JSX */}
  *     </>
@@ -30,8 +30,8 @@ export const useSEO = ({
   title = 'RentEase - Quality Rentals at Your Fingertips',
   description = 'Rent, buy, and sell anything on RentEase. The most trusted rental marketplace for quality items at affordable prices.',
   keywords = 'rental platform, buy rent sell, affordable rentals',
-  image = 'https://rent-ease-gold.vercel.app/favicon.svg',
-  url = 'https://rent-ease-gold.vercel.app',
+  image = 'https://rent-ease-web.vercel.app/favicon.svg',
+  url = 'https://rent-ease-web.vercel.app',
   type = 'website'
 } = {}) => {
   useEffect(() => {

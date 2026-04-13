@@ -44,7 +44,7 @@ const Login = () => {
             title="Login | RentEase - Sign In to Your Account"
             description="Sign in to your RentEase account to access bookings, listings, and manage your rentals securely."
             keywords="login, sign in, RentEase account, rental account"
-            url="https://rent-ease-gold.vercel.app/login"
+            url="https://rent-ease-web.vercel.app/login"
         />
         <div className="min-h-screen flex bg-white dark:bg-slate-950">
             {/* Left side: Form */}

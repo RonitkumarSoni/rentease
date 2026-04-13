@@ -4,8 +4,8 @@ export const RentEaseHelmet = ({
   title = 'RentEase - Quality Rentals at Your Fingertips',
   description = 'RentEase is your one-stop rental marketplace to buy, sell, and rent anything. Discover affordable rentals at affordable prices.',
   keywords = 'rental marketplace, buy rent sell, affordable rentals, online rentals, RentEase',
-  image = 'https://rent-ease-gold.vercel.app/favicon.svg',
-  url = 'https://rent-ease-gold.vercel.app',
+  image = 'https://rent-ease-web.vercel.app/favicon.svg',
+  url = 'https://rent-ease-web.vercel.app',
   type = 'website',
   author = 'RentEase'
 } = {}) => {

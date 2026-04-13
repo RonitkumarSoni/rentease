@@ -20,15 +20,18 @@ function App() {
                 <WishlistProvider>
                   <CartProvider>
                     <Toaster 
-                      position="top-right"
+                      position="bottom-left"
                       toastOptions={{
                         duration: 4000,
                         style: {
-                          background: '#333',
-                          color: '#fff',
-                          fontWeight: 'bold',
+                          background: '#fff',
+                          color: '#212121',
+                          fontWeight: '500',
                           fontSize: '14px',
-                          borderRadius: '4px'
+                          borderRadius: '8px',
+                          padding: '12px 24px',
+                          boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                          borderLeft: '4px solid #2874f0'
                         },
                       }}
                     />

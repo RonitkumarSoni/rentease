@@ -162,11 +162,10 @@ const ImageSearchModal = ({ isOpen, onClose }) => {
                                 <button
                                     key={id}
                                     onClick={() => handleTabChange(id)}
-                                    className={`flex-1 flex items-center justify-center gap-2 py-3 text-xs font-black uppercase tracking-widest transition-all border-b-2 ${
-                                        tab === id
+                                    className={`flex-1 flex items-center justify-center gap-2 py-3 text-xs font-black uppercase tracking-widest transition-all border-b-2 ${tab === id
                                             ? 'border-[#2874f0] text-[#2874f0]'
                                             : 'border-transparent text-slate-400 hover:text-slate-600'
-                                    }`}
+                                        }`}
                                 >
                                     <Icon size={14} /> {label}
                                 </button>
