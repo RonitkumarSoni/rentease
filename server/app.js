@@ -15,6 +15,14 @@ import reviewRoutes from './src/routes/reviewRoutes.js';
 import wishlistRoutes from './src/routes/wishlistRoutes.js';
 
 const app = express();
+const allowedOrigins = [
+    'http://localhost:5173',
+    'https://rent-ease-web.vercel.app',
+    'https://rent-ease-ronit-kumar-sonis-projects.vercel.app',
+    'https://rent-ease-ronitkumarsoni-ronit-kumar-sonis-projects.vercel.app',
+    'https://rentease-lemon.vercel.app',
+    'https://rentease-ronit-kumar-sonis-projects.vercel.app',
+];
 
 // Body parser
 app.use(express.json());
@@ -23,8 +31,16 @@ app.use(express.urlencoded({ extended: true }));
 // Cookie parser
 app.use(cookieParser());
 
-// Enable CORS
-app.use(cors());
+// Enable CORS for local development and known production frontends.
+app.use(cors({
+    origin(origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            return callback(null, true);
+        }
+        return callback(new Error(`CORS blocked for origin: ${origin}`));
+    },
+    credentials: true,
+}));
 
 // Dev logging middleware
 if (process.env.NODE_ENV === 'development') {
