@@ -1,10 +1,12 @@
 import axios from 'axios';
 
-// Development: use relative path (proxied by Vite)
-// Production: use full backend URL
-let baseURL = import.meta.env.VITE_API_URL || '/api';
+// Call sites already include `/api/...`, so keep the base URL at the host/root.
+let baseURL = import.meta.env.VITE_API_URL || '';
 if (baseURL.endsWith('/')) {
     baseURL = baseURL.slice(0, -1);
+}
+if (baseURL.endsWith('/api')) {
+    baseURL = baseURL.slice(0, -4);
 }
 
 const api = axios.create({

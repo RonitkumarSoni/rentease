@@ -159,7 +159,7 @@ export const AuthProvider = ({ children }) => {
 
     const signInWithGoogle = async () => {
         try {
-            const redirectTo = window.location.origin;
+            const redirectTo = `${window.location.origin}/login`;
             console.log('Initiating Google Login. Redirecting to:', redirectTo);
             
             const { error } = await supabase.auth.signInWithOAuth({
@@ -168,7 +168,7 @@ export const AuthProvider = ({ children }) => {
                     redirectTo: redirectTo,
                     queryParams: {
                         access_type: 'offline',
-                        prompt: 'consensus',
+                        prompt: 'consent',
                     },
                 }
             });
@@ -185,4 +185,3 @@ export const AuthProvider = ({ children }) => {
         </AuthContext.Provider>
     );
 };
-
